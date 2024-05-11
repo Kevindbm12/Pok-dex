@@ -1,0 +1,117 @@
+/* -----------------------configuraciones generales ----------------------- */
+@font-face {
+    font-family: 'Rancho';
+    src: url('../assets/fonts/Rancho-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Rancho', sans-serif;
+background-color: darkgrey;
+}
+
+/* -------------------------------------------------------------------- */
+/* ! ----------------------------------cabecera ---------------------------------*/
+
+header{
+    text-align: center;
+    background-color:darkcyan;
+
+}
+headerimg{
+    width: 20rem; /* rem es una medida relativa 1rem equivalen a 16 px */
+}
+
+
+/* ? --------------------------------contenido principal--------------------------------*/
+
+/* contenedor principal de Pokemons */
+
+#pokemons{
+    display: grid;
+    grid-template-columns: repeat(5, 15rem);
+    justify-content: center;
+    gap: 1rem;
+    margin : 2rem;
+}
+
+.card {
+    text-align: center;
+    border: 0.2rem solid darkcyan;
+    border-radius: 15%;
+    background-color: whitesmoke;
+}
+.card:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color:black;
+}
+.card__img{
+    width: 9rem;
+}
+
+/* detalle de la tarjeta */
+
+.card__detail{
+    border-radius: 30%;
+    border: 0.2rem solid darkcyan;
+}
+/* ____________________________________________________________ */
+/* Botones de pagina */
+.pagination{
+    text-align: center;
+    font-size: 3rem;
+}
+.pagination__item {
+    margin: 1rem;
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3 ease;
+}
+
+.pagination__item:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+/* _____________________________________________________________ */
+/* ! todo________pie de pagina____________ */
+
+footer {
+    text-align: center;
+    font-size: 1rem;
+    background-color: darkcyan;
+    color: black;
+}
+
+@media (width <= 320px) {
+    #pokemons {
+        grid-template-columns: repeat(1, 15rem);
+    }
+}
+
+@media (width >= 768px) {
+    #pokemons {
+        grid-template-columns: repeat(2, 15rem);
+    }
+}
+
+@media (width >= 1024px) {
+    #pokemons {
+        grid-template-columns: repeat(3, 15rem);
+    }
+}
+
+@media (width >= 1440px) {
+    #pokemons {
+        grid-template-columns: repeat(4, 15rem);
+    }
+}
+
+@media (width >= 2560px) {
+    #pokemons {
+        grid-template-columns: repeat(8, 15rem);
+    }
+}
